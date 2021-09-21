@@ -10,9 +10,10 @@
 $color in $theme-colors {
     .btn-#{$name} {
         background-color: var(--#{$name});
-        color: var(--white);
+        color: set-btn-text-color($color);
         &:hover {
             background-color: darken($color, set-btn-darken-percentage($color));
+
         }
     }
 }

@@ -6,3 +6,12 @@
       @return 10%;
     }
 }
+
+@function  set-btn-text-color($color) {
+  @if (lightness($color) > 80) {    
+    @return map-get($theme-colors, base-color);
+  }
+  @else {
+    @return map-get($theme-colors, white);
+  }
+}
