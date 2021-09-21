@@ -6,13 +6,13 @@
     color: var(--white);
 }
 
-@each $name, $color in $theme-colors {
+@each $name,
+$color in $theme-colors {
     .btn-#{$name} {
         background-color: var(--#{$name});
         color: var(--white);
-
         &:hover {
-            background-color: adjust-color($color, $lightness: 15%);
+            background-color: darken($color, set-btn-darken-percentage($color));
         }
     }
 }

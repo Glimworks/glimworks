@@ -1,0 +1,8 @@
+@function  set-btn-darken-percentage($color) {
+    @if (lightness($color) > 80) {
+      @return 40%;
+    }
+    @else {
+      @return 10%;
+    }
+}
