@@ -9,10 +9,10 @@
 @each $name, $color in $theme-colors {
     .btn-#{$name} {
         background-color: var(--#{$name}-color);
-        color: var(--white-color);
+        color: set-btn-text-color($color);
 
         &:hover {
-            background-color: adjust-color($color, $lightness: 15%);
+            background-color: darken($color, set-btn-darken-percentage($color));
         }
     }
 }
