@@ -1,21 +1,20 @@
 /** @format */
 
 // ABSTRACTS
-@import 'abstracts/variables';
-@import 'abstracts/mixins';
-@import 'abstracts/functions';
+@import "abstracts/variables";
+@import "abstracts/mixins";
+@import "abstracts/functions";
 
 // VENDORS
 
 //BASE
-@import 'base/reset';
-@import 'base/root';
-@import 'base/reboot';
-@import 'base/typography';
+@import "base/reset";
+@import "base/root";
+@import "base/reboot";
+@import "base/typography";
 
 // LAYOUT
 @import 'layout/navigation';
-@import 'layout/side-navigation';
 @import 'layout/grid';
 @import 'layout/header';
 @import 'layout/footer';
@@ -25,6 +24,7 @@
 @import 'components/fancy';
 @import 'components/nav'; 
 @import 'components/modal';
+@import "components/offcanvas";
 
 // PAGES
 
