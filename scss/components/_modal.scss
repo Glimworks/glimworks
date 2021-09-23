@@ -1,0 +1,16 @@
+.modal {
+
+    border: 1px solid blue;
+    width: 40vw;
+
+    &.hidden {
+        display: none;
+    }
+    // DARK BACKGROUND
+    //&::after {
+    //    content: "";
+    //    background-color: black;
+    //    width: 100vw;
+    //    height: 100vh;
+    //}
+}
