@@ -1,27 +1,28 @@
 // ABSTRACTS
-@import 'abstracts/variables';
-@import 'abstracts/mixins';
-@import 'abstracts/functions';
+@import "abstracts/variables";
+@import "abstracts/mixins";
+@import "abstracts/functions";
 
 // VENDORS
 
 //BASE
-@import 'base/reset';
-@import 'base/root';
-@import 'base/reboot';
-@import 'base/typography';
+@import "base/reset";
+@import "base/root";
+@import "base/reboot";
+@import "base/typography";
 
 // LAYOUT
-@import 'layout/navigation';
-@import 'layout/grid';
-@import 'layout/header';
-@import 'layout/footer';
+@import "layout/navigation";
+@import "layout/grid";
+@import "layout/header";
+@import "layout/footer";
 
 // COMPONENTS
-@import 'components/buttons';
-@import 'components/fancy';
+@import "components/buttons";
+@import "components/fancy";
+@import "components/offcanvas";
 
 // PAGES
 
 // THEMES
-@import 'themes/theme'; 
+@import "themes/theme";

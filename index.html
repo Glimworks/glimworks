@@ -1,47 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Glimworks - Light weight SASS framework</title>
+        <script type="module" src="assets/js/app.js"></script>
+        <link href="assets/css/main.min.css" rel="stylesheet" />
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glimworks - Light weight SASS framework</title>
-    <script src="assets/js/app.js"></script>
-    <link href="assets/css/main.min.css" rel="stylesheet">
-</head>
-
-<body>
-    <header>
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h1>Glimworks - Light weight SASS framework</h1>
-                    <h2>Components</h2>
-                    <h3>Buttons</h3>
-                    <a href="#" class="btn btn-primary">Primary</a>
-                    <a href="#" class="btn btn-secondary">Secondary</a>
-                    <a href="#" class="btn btn-success">Success</a>
-                    <a href="#" class="btn btn-danger">Danger</a>
-                    <a href="#" class="btn btn-warning">Warning</a>
-                    <a href="#" class="btn btn-info">Info</a>
-                    <a href="#" class="btn btn-light">Light</a>
-                    <a href="#" class="btn btn-dark">Dark</a>
-                    <a href="#" class="btn btn-muted">Muted</a>
-                    <h2>Styles</h2>
-                    <h3>Fancy</h3>
-                    <h4>Links</h4>
-                    <a href="#" class="fancy-link">Fancy Link - That are quite long / Mattias</a>
-                    <h4>Boxes</h4>
-                    <div class="box fancy-box">
-                        <div class="box-inner">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt eligendi reiciendis nobis dolorum molestiae minima, suscipit quas labore laudantium! Repudiandae ipsam minus ipsum, illo ab suscipit alias. Necessitatibus, molestiae doloribus!
+    <body>
+        <div class="offcanvas" id="offcanvas">
+            <a
+                href="javascript:void(0)"
+                class="closebtn"
+                onclick="closeOffcanvas()"
+                >&times;</a
+            >
+            <ul>
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+            </ul>
+        </div>
+        <header>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1>Glimworks - Light weight SASS framework</h1>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main id="main">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>Components</h2>
+                        <h3>Buttons</h3>
+                        <a href="#" class="btn btn-primary">Primary</a>
+                        <a href="#" class="btn btn-secondary">Secondary</a>
+                        <a href="#" class="btn btn-success">Success</a>
+                        <a href="#" class="btn btn-danger">Danger</a>
+                        <a href="#" class="btn btn-warning">Warning</a>
+                        <a href="#" class="btn btn-info">Info</a>
+                        <a href="#" class="btn btn-light">Light</a>
+                        <a href="#" class="btn btn-dark">Dark</a>
+                        <a href="#" class="btn btn-muted">Muted</a>
+                        <h2>Styles</h2>
+                        <h3>Fancy</h3>
+                        <h4>Links</h4>
+                        <a href="#" class="fancy-link"
+                            >Fancy Link - That are quite long / Mattias</a
+                        >
+                        <h4>Boxes</h4>
+                        <div class="box fancy-box">
+                            <div class="box-inner">
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Sunt eligendi reiciendis nobis
+                                dolorum molestiae minima, suscipit quas labore
+                                laudantium! Repudiandae ipsam minus ipsum, illo
+                                ab suscipit alias. Necessitatibus, molestiae
+                                doloribus!
+                            </div>
+                        </div>
+                        <div>
+                            <span onclick="openOffcanvas()">open</span>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </header>
-    
-</body>
-
+        </main>
+    </body>
 </html>
