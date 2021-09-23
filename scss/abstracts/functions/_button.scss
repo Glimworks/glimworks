@@ -1,11 +1,12 @@
-@function set-btn-darken-percentage($color) {
-    @if (lightness($color) > 80) {
-      @return 40%;
-    }
-    @else {
-      @return 10%;
-    }
-}
+// Function not needed, might come in handy later
+// @function set-btn-darken-percentage($color) {
+//     @if (lightness($color) > 80) {
+//       @return 40%;
+//     }
+//     @else {
+//       @return 10%;
+//     }
+// }
 
 @function set-btn-text-color($color) {
   @if (lightness($color) > 80) {

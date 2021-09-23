@@ -1,6 +1,4 @@
 // -- COLORS --
-
-
 $theme-colors: (
     "white": #ffffff,
     "base": #1c1c1c,
@@ -15,6 +13,13 @@ $theme-colors: (
     "muted": #EDECF1
 ) !default;
 
+// -- Sizes for btns 
+$btn-sizes: (
+    "none": initial,
+    "small": 0.5rem,
+    "medium": 1rem,
+    "large": 2rem,
+) !default;
 
 // -- Container -- 
 $container-width: 1200 !default;

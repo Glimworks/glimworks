@@ -12,7 +12,22 @@
         color: set-btn-text-color($color);
 
         &:hover {
-            background-color: darken($color, set-btn-darken-percentage($color));
+            background-color: darken($color, 15%);
         }
+    }
+    .btn-outline-#{$name} {
+        border: 1px solid $color;
+        background-color: initial;
+        color: $color;
+        &:hover {
+            background-color: darken($color, 15%);
+            color: set-btn-text-color($color);
+        }
+    }
+}
+
+@each $name, $size in $btn-sizes {
+    .btn-#{$name} {
+        padding: $size;
     }
 }
