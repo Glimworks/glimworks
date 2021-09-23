@@ -1,3 +1,5 @@
+/** @format */
+
 // ABSTRACTS
 @import 'abstracts/variables';
 @import 'abstracts/mixins';
@@ -20,8 +22,9 @@
 // COMPONENTS
 @import 'components/buttons';
 @import 'components/fancy';
+@import 'components/nav';
 
 // PAGES
 
 // THEMES
-@import 'themes/theme'; 
+@import 'themes/theme';
