@@ -1,5 +1,19 @@
 /** @format */
 
+.backdrop {
+	position: fixed;
+	inset: 0;
+	background-color: rgba(0, 0, 0, 0);
+	pointer-events: none;
+	z-index: 14;
+	transition: all 300ms ease;
+
+	&.open {
+		background-color: rgba(0, 0, 0, 0.562);
+		pointer-events: all;
+	}
+}
+
 nav {
 	display: flex;
 	align-items: center;
@@ -9,6 +23,14 @@ nav {
 	height: 64px;
 	padding: 0.77rem;
 
+	.align-right {
+		margin-left: auto;
+	}
+
+	.align-left {
+		margin-right: auto;
+	}
+
 	.nav-toggle {
 		display: none;
 		flex-direction: column;
@@ -16,6 +38,7 @@ nav {
 		height: 75%;
 		width: 40px;
 		margin-right: 0.77rem;
+
 		span {
 			height: 1.75px;
 			width: 100%;
@@ -93,13 +116,31 @@ nav {
 	nav {
 		display: flex;
 		justify-content: space-between;
+		position: relative;
 
 		.nav-content {
 			position: fixed;
 			width: 0;
 			overflow: hidden;
+			top: 0;
+			height: 100%;
+			background-color: inherit;
+			z-index: 15;
+			flex-direction: column;
+			transition: all 300ms ease;
+
+			&.anchor-right {
+				right: 0;
+				left: unset;
+			}
+
+			&.anchor-left {
+				left: 0;
+				right: unset;
+			}
 
 			&.open {
+				width: 300px;
 			}
 		}
 

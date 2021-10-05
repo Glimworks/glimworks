@@ -990,6 +990,21 @@ a {
 }
 
 /** @format */
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0);
+  pointer-events: none;
+  z-index: 14;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.backdrop.open {
+  background-color: rgba(0, 0, 0, 0.562);
+  pointer-events: all;
+}
+
 nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1002,6 +1017,14 @@ nav {
   margin-bottom: 5px;
   height: 64px;
   padding: 0.77rem;
+}
+
+nav .align-right {
+  margin-left: auto;
+}
+
+nav .align-left {
+  margin-right: auto;
 }
 
 nav .nav-toggle {
@@ -1100,11 +1123,33 @@ nav ul li a {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    position: relative;
   }
   nav .nav-content {
     position: fixed;
     width: 0;
     overflow: hidden;
+    top: 0;
+    height: 100%;
+    background-color: inherit;
+    z-index: 15;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-transition: all 300ms ease;
+    transition: all 300ms ease;
+  }
+  nav .nav-content.anchor-right {
+    right: 0;
+    left: unset;
+  }
+  nav .nav-content.anchor-left {
+    left: 0;
+    right: unset;
+  }
+  nav .nav-content.open {
+    width: 300px;
   }
   nav .nav-toggle {
     display: -webkit-box;
