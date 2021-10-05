@@ -990,6 +990,19 @@ a {
 }
 
 /** @format */
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0);
+  pointer-events: none;
+  z-index: 14;
+}
+
+.backdrop.open {
+  background-color: rgba(0, 0, 0, 0.562);
+  pointer-events: all;
+}
+
 nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1114,10 +1127,22 @@ nav ul li a {
     position: fixed;
     width: 0;
     overflow: hidden;
-    left: 0;
     top: 0;
     height: 100%;
     background-color: inherit;
+    z-index: 15;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  nav .nav-content.anchor-right {
+    right: 0;
+    left: unset;
+  }
+  nav .nav-content.anchor-left {
+    left: 0;
+    right: unset;
   }
   nav .nav-content.open {
     width: 300px;

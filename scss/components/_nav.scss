@@ -1,5 +1,18 @@
 /** @format */
 
+.backdrop {
+	position: fixed;
+	inset: 0;
+	background-color: rgba(0, 0, 0, 0);
+	pointer-events: none;
+	z-index: 14;
+
+	&.open {
+		background-color: rgba(0, 0, 0, 0.562);
+		pointer-events: all;
+	}
+}
+
 nav {
 	display: flex;
 	align-items: center;
@@ -108,10 +121,21 @@ nav {
 			position: fixed;
 			width: 0;
 			overflow: hidden;
-			left: 0;
 			top: 0;
 			height: 100%;
 			background-color: inherit;
+			z-index: 15;
+			flex-direction: column;
+
+			&.anchor-right {
+				right: 0;
+				left: unset;
+			}
+
+			&.anchor-left {
+				left: 0;
+				right: unset;
+			}
 
 			&.open {
 				width: 300px;

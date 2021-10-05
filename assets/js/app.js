@@ -28,15 +28,38 @@ function add_listeners() {
 		throw new Error(error);
 	} else {
 		for (let i = 0; i < navs.length; i++) {
+			let bd = document.createElement('div');
+			bd.classList.add('backdrop');
+
 			let id = randID();
 			navs[i].setAttribute('data-parent', id);
 			nav_btns[i].setAttribute('data-child', id);
 			nav_btns[i].addEventListener('click', (e) => {
-				let nav = document.querySelector(`[data-parent='${id}']`);
+				let nav = document.querySelector(
+					`.nav-content[data-parent='${id}']`
+				);
+
 				if (nav !== null) {
 					nav.classList.toggle('open');
 				}
+
+				bd.classList.toggle('open');
 			});
+
+			bd.addEventListener('click', (e) => {
+				let nav = document.querySelector(
+					`.nav-content[data-parent='${id}']`
+				);
+
+				if (nav !== null) {
+					nav.classList.toggle('open');
+				}
+
+				bd.classList.toggle('open');
+			});
+
+			bd.setAttribute('data-parent', id);
+			window.document.body.appendChild(bd);
 		}
 	}
 }
