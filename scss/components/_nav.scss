@@ -6,6 +6,7 @@
 	background-color: rgba(0, 0, 0, 0);
 	pointer-events: none;
 	z-index: 14;
+	transition: all 300ms ease;
 
 	&.open {
 		background-color: rgba(0, 0, 0, 0.562);
@@ -126,6 +127,7 @@ nav {
 			background-color: inherit;
 			z-index: 15;
 			flex-direction: column;
+			transition: all 300ms ease;
 
 			&.anchor-right {
 				right: 0;

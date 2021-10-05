@@ -11,6 +11,28 @@ function randID(n = 10) {
 	return id;
 }
 
+function toggle(id) {
+	const items = [
+		document.querySelector(`.nav-content[data-parent='${id}']`),
+		document.querySelector(`.backdrop[data-parent='${id}']`),
+		document.querySelector(`.nav-toggle[data-child='${id}']`),
+	];
+
+	items.forEach((item) => {
+		if (item !== null) {
+			item.classList.toggle('open');
+		}
+	});
+}
+
+function addBackdrop(id) {
+	let bd = document.createElement('div');
+	bd.classList.add('backdrop');
+	bd.setAttribute('data-parent', id);
+	bd.addEventListener('click', (e) => toggle(id));
+	window.document.body.appendChild(bd);
+}
+
 function main() {
 	add_listeners();
 	console.log('document loaded');
@@ -26,41 +48,14 @@ function add_listeners() {
 				? 'add a trigger for every nav'
 				: 'add a nav-content for every button';
 		throw new Error(error);
-	} else {
-		for (let i = 0; i < navs.length; i++) {
-			let bd = document.createElement('div');
-			bd.classList.add('backdrop');
+	}
 
-			let id = randID();
-			navs[i].setAttribute('data-parent', id);
-			nav_btns[i].setAttribute('data-child', id);
-			nav_btns[i].addEventListener('click', (e) => {
-				let nav = document.querySelector(
-					`.nav-content[data-parent='${id}']`
-				);
-
-				if (nav !== null) {
-					nav.classList.toggle('open');
-				}
-
-				bd.classList.toggle('open');
-			});
-
-			bd.addEventListener('click', (e) => {
-				let nav = document.querySelector(
-					`.nav-content[data-parent='${id}']`
-				);
-
-				if (nav !== null) {
-					nav.classList.toggle('open');
-				}
-
-				bd.classList.toggle('open');
-			});
-
-			bd.setAttribute('data-parent', id);
-			window.document.body.appendChild(bd);
-		}
+	for (let i = 0; i < navs.length; i++) {
+		let id = randID();
+		navs[i].setAttribute('data-parent', id);
+		nav_btns[i].setAttribute('data-child', id);
+		nav_btns[i].addEventListener('click', (e) => toggle(id));
+		addBackdrop(id);
 	}
 }
 
