@@ -1,10 +1,13 @@
 .modal {
     background-color: white;
     z-index: 99;
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    display: none;
+    // TODO: We should have some standardized padding
+    padding: 1rem;
 
     // Default values same as medium size
     width: 50vw;
@@ -22,8 +25,8 @@
         max-height: 70vh;
     }
 
-    &.hidden {
-        display: none;
+    &.active {
+        display: block;
     }
 
     .btn-modal-x {
@@ -31,24 +34,28 @@
         position: absolute;
         top: 0;
         right: 0;
-        transform: translate(-30%, -30%);
+        // TODO: There is probably a better way to scale this.
+        width: 1.5rem;
+        height: 1.5rem;
+        text-align: center;
     }
 }
 
 .modal-background {
     z-index: 98;
+    position: fixed;
     top: 0;
     left: 0;
-    position: absolute;
     margin: 0;
     padding: 0;
     height: 100vh;
     width: 100vw;
+    display: none;
+    &.active {
+        display: block;
+    }
 
     background-color: rgba(black, 0.6);
     box-shadow: 0 0 6rem 2rem inset rgba(black, 0.4);
 
-    &.hidden {
-        display: none;
-    }
 }

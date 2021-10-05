@@ -6,7 +6,7 @@ function toggleModal(id) {
     const modal = document.querySelector(`#${id}`);
 
     if(modal) {
-        modal.classList.toggle("hidden");
+        modal.classList.toggle("active");
     } else {
         console.warn(`Modal with id '${id}' could not be found.`);
     }
@@ -21,11 +21,12 @@ function initModalCloseButtons() {
 
     modals.forEach((el) => {
         const buttonDiv = document.createElement("div");
-        const buttonDivContent = document.createElement("p");
+        const buttonDivContent = document.createElement("a");
 
         // TODO: This should probably include an inline icon instead, this is
         // just a placeholder.
         buttonDivContent.textContent = "X";
+        buttonDivContent.href = ""
         buttonDiv.appendChild(buttonDivContent);
         
         // TODO: Is this an appropriate name?
@@ -71,8 +72,8 @@ function initModalBackground() {
     modalBackground.addEventListener("click", () => {
         const modals = document.querySelectorAll(".modal");
         modals.forEach((el) => {
-            if(!el.classList.contains("hidden")) {
-                el.classList.toggle("hidden");
+            if(el.classList.contains("active")) {
+                el.classList.toggle("active");
             }
         });
 
@@ -91,7 +92,7 @@ function toggleModalBackground() {
         console.warn("Could not find Modal Background element.");
     }
 
-    modalBackground.classList.toggle("hidden");
+    modalBackground.classList.toggle("active");
 }
 
 /**
