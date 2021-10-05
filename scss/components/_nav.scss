@@ -108,8 +108,13 @@ nav {
 			position: fixed;
 			width: 0;
 			overflow: hidden;
+			left: 0;
+			top: 0;
+			height: 100%;
+			background-color: inherit;
 
 			&.open {
+				width: 300px;
 			}
 		}
 

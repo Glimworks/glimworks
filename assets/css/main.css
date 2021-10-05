@@ -1114,6 +1114,13 @@ nav ul li a {
     position: fixed;
     width: 0;
     overflow: hidden;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: inherit;
+  }
+  nav .nav-content.open {
+    width: 300px;
   }
   nav .nav-toggle {
     display: -webkit-box;
