@@ -1,33 +1,35 @@
+/** @format */
+
 .btn {
-    display: inline-block;
-    border-radius: $border-radius;
-    padding: 0.5rem 1rem;
-    background-color: var(--primary-color);
-    color: var(--white);
+	display: inline-block;
+	border-radius: $border-radius;
+	padding: 0.5rem 1rem;
+	background-color: var(--primary-color);
+	color: var(--white);
 }
 
 @each $name, $color in $theme-colors {
-    .btn-#{$name} {
-        background-color: var(--#{$name}-color);
-        color: set-btn-text-color($color);
+	.btn-#{$name} {
+		background-color: var(--#{$name}-color);
+		color: set-btn-text-color($color);
 
-        &:hover {
-            background-color: darken($color, 15%);
-        }
-    }
-    .btn-outline-#{$name} {
-        border: 1px solid $color;
-        background-color: initial;
-        color: $color;
-        &:hover {
-            background-color: darken($color, 15%);
-            color: set-btn-text-color($color);
-        }
-    }
+		&:hover {
+			background-color: darken($color, 15%);
+		}
+	}
+	.btn-outline-#{$name} {
+		border: 1px solid $color;
+		background-color: initial;
+		color: $color;
+		&:hover {
+			background-color: darken($color, 15%);
+			color: set-btn-text-color($color);
+		}
+	}
 }
 
 @each $name, $size in $btn-sizes {
-    .btn-#{$name} {
-        padding: $size;
-    }
+	.btn-#{$name} {
+		padding: $size;
+	}
 }

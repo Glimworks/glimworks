@@ -1,51 +1,59 @@
-.fancy-link {
-    background-image: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-    background-size: 0% 3px;
-    background-repeat: no-repeat;
-    background-position: left bottom;
-    transition: background-size 300ms ease;
+/** @format */
 
-    &:hover {
-        background-size: 100% 3px;
-    }
+.fancy-link {
+	background-image: linear-gradient(
+		90deg,
+		var(--primary-color),
+		var(--secondary-color)
+	);
+	background-size: 0% 3px;
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	transition: background-size 300ms ease;
+
+	&:hover {
+		background-size: 100% 3px;
+	}
 }
 
 .fancy-box {
-    --border-width: 5px;
+	--border-width: 5px;
 
-    position: relative;
-    width: auto;
-    height: auto;
-    color: black;
-    background-color: white; 
-    padding: 2rem;
-    transition: background-size 300ms ease;
+	position: relative;
+	width: auto;
+	height: auto;
+	color: black;
+	background-color: white;
+	padding: 2rem;
+	transition: background-size 300ms ease;
 
-    &:hover {
-        &::after {
-            background-size: 200%;
-            animation: moveGradient 4s alternate infinite;
-        }
-    }
+	&:hover {
+		&::after {
+			background-size: 200%;
+			animation: moveGradient 4s alternate infinite;
+		}
+	}
 
-    &::after {
-        position: absolute;
-        content: "";
-        top: calc(-1 * var(--border-width));
-        left: calc(-1 * var(--border-width));
-        z-index: -1;
-        width: calc(100% + var(--border-width) * 2);
-        height: calc(100% + var(--border-width) * 2);
-        background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-        background-size: 100% 100%;
-        background-position: 0 50%;
-        
-        
-    }
+	&::after {
+		position: absolute;
+		content: '';
+		top: calc(-1 * var(--border-width));
+		left: calc(-1 * var(--border-width));
+		z-index: -1;
+		width: calc(100% + var(--border-width) * 2);
+		height: calc(100% + var(--border-width) * 2);
+		background: linear-gradient(
+			90deg,
+			var(--primary-color),
+			var(--secondary-color)
+		);
+		background-size: 100% 100%;
+		background-position: 0 50%;
+	}
 }
 
 @keyframes moveGradient {
-    50% {
-        background-position: 100% 50%;
-    }
+	50% {
+		background-position: 100% 50%;
+	}
 }

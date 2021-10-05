@@ -4,28 +4,70 @@ nav {
 	display: flex;
 	align-items: center;
 	width: 100%;
-	padding: 1rem;
-	background-color: rgb(78, 78, 78);
+	background-color: #333;
 	margin-bottom: 5px;
+	height: 64px;
+	padding: 0.77rem;
+
+	.nav-toggle {
+		display: none;
+		flex-direction: column;
+		justify-content: space-around;
+		height: 75%;
+		width: 40px;
+		margin-right: 0.77rem;
+		span {
+			height: 1.75px;
+			width: 100%;
+			display: block;
+			background-color: rgb(255, 255, 255);
+		}
+	}
+
+	.logo {
+		height: 90%;
+		margin: 0 10px 0 0;
+
+		img {
+			height: 100%;
+			display: block;
+		}
+	}
 
 	&.fixed {
 		position: fixed;
+		top: 0;
+		left: 0;
+	}
+
+	.nav-content {
+		display: flex;
+		flex-grow: 1;
+		width: 100%;
 	}
 
 	&.justify-start {
-		justify-content: flex-start;
+		> .nav-content {
+			justify-content: flex-start;
+		}
 	}
 
 	&.justify-end {
-		justify-content: flex-end;
+		> .nav-content {
+			justify-content: flex-end;
+		}
 	}
 
 	&.justify-between {
-		justify-content: space-between;
+		> .nav-content {
+			justify-content: space-between;
+		}
 	}
 
 	&.justify-center {
-		justify-content: center;
+		> .nav-content {
+			justify-content: center;
+		}
 	}
 
 	ul {
@@ -40,9 +82,29 @@ nav {
 			}
 
 			a {
-				color: #fff;
+				color: rgb(255, 255, 255);
 				display: inline-block;
 			}
+		}
+	}
+}
+
+@media (max-width: 864px) {
+	nav {
+		display: flex;
+		justify-content: space-between;
+
+		.nav-content {
+			position: fixed;
+			width: 0;
+			overflow: hidden;
+
+			&.open {
+			}
+		}
+
+		.nav-toggle {
+			display: flex;
 		}
 	}
 }
