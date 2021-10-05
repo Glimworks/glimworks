@@ -9,6 +9,14 @@ nav {
 	height: 64px;
 	padding: 0.77rem;
 
+	.align-right {
+		margin-left: auto;
+	}
+
+	.align-left {
+		margin-right: auto;
+	}
+
 	.nav-toggle {
 		display: none;
 		flex-direction: column;
@@ -16,6 +24,7 @@ nav {
 		height: 75%;
 		width: 40px;
 		margin-right: 0.77rem;
+
 		span {
 			height: 1.75px;
 			width: 100%;
@@ -93,6 +102,7 @@ nav {
 	nav {
 		display: flex;
 		justify-content: space-between;
+		position: relative;
 
 		.nav-content {
 			position: fixed;

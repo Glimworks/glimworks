@@ -1004,6 +1004,14 @@ nav {
   padding: 0.77rem;
 }
 
+nav .align-right {
+  margin-left: auto;
+}
+
+nav .align-left {
+  margin-right: auto;
+}
+
 nav .nav-toggle {
   display: none;
   -webkit-box-orient: vertical;
@@ -1100,6 +1108,7 @@ nav ul li a {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    position: relative;
   }
   nav .nav-content {
     position: fixed;
