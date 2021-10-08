@@ -15,3 +15,11 @@ body {
 a {
     display: inline-block;
 }
+
+code {
+    border-radius: .4rem;
+    margin: 2rem 0;
+    background-color: var(--muted-color);
+    display: block;
+    padding: 2rem;
+}
