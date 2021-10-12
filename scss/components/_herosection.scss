@@ -1,14 +1,33 @@
-.herosection {
-    border: 1px solid black;
-    background-color: darkgray;
-
-    // TODO: Is rem the best way to implement the padding? Should default
-    // padding even be here?
-    padding: 5rem 25rem;
+.hero-banner {
     position: fixed;
     left: 0;
     width: 100%;
 
-    display: flex;
-    flex-direction: column;
+    .hero-banner-content {
+        // TODO: Is rem the best way to implement the padding? Should default
+        // padding even be here?
+        padding: 3rem 25rem;
+        display: flex;
+        flex-direction: column;
+        &.align-right {
+            align-items: flex-end;
+        }
+        &.align-left {
+            align-items: flex-start;
+        }
+        &.align-center {
+            align-items: center;
+        }
+    }
+
+    // TODO: I want an image to render behind the content and fit the dimensions
+    // of the hero banner, without stretching. How to implement without
+    // hard-coding a background-image attribute?
+    .hero-banner-bg {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
 }
