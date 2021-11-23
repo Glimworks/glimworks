@@ -3,7 +3,7 @@ $ofsetVertical: 150px; /* height of the offcanvas element */
 
 .offCanvas {
     position: fixed; /* Stay in place */
-    z-index: 2; /* Stay on top */
+    z-index: 100; /* Stay on top */
     background-color: #111; /* Black*/
     transition: 0.5s; /* 0.5 second transition effect to slide in the offcanvas */
     &.left {

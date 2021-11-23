@@ -1,13 +1,7 @@
 /* Toggles active class on offCanvas and canvasOfset to add margin and show offCanvas and modalBackgroud */
-function openOffcanvas() {
-    document.getElementById("offCanvas").classList.toggle("active");
-    document.getElementById("canvasOfset").classList.toggle("active");
+function toggleOffcanvas() {
+    let canvas = document.getElementById("offcanvas");
+    canvas.classList.toggle("active");
+    let offset = document.getElementById("canvasOfset");
+    offset.classList.toggle("active");
 }
-
-/* Toggles active class on offCanvas and canvasOfset to remove margin and hide offCanvas and modalBackgroud */
-function closeOffcanvas() {
-    document.getElementById("offCanvas").classList.toggle("active");
-    document.getElementById("canvasOfset").classList.toggle("active");
-}
-
-export { openOffcanvas, closeOffcanvas };
