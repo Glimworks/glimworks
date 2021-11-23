@@ -1,0 +1,42 @@
+#animationDiv {
+  padding: 2rem 4rem;
+  display: inline-block;
+  text-align: center;
+  margin-top: 3rem;
+  background-color: #756e6e;
+}
+
+.helicopter {
+  animation-name: spin;
+  animation-duration: 500ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.fade-in {
+  animation-name: fade-in;
+  animation-duration: 1000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

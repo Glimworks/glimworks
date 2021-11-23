@@ -8,18 +8,12 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Glimworks - Light weight SASS framework</title>
+	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 	<link href="/assets/css/main.min.css" rel="stylesheet" />
 </head>
 
 <body>
-	<section class="container">
-		<div class="row">
-			<div class="col-12">
-				<h1>Glimworks - Light weight SASS framework</h1>
-			</div>
-		</div>
-
-	</section>
 	<div class="container">
 		<div class="row">
 			<div class="col-3">
@@ -33,19 +27,17 @@
 						<li><a href="navigation.html">Navigation</a></li>
 						<li><a href="fancy.html">Fancy</a></li>
 						<li><a href="modal.html">Modal</a></li>
-						<li><a href="#"></a></li>
-						<li><a href="#"></a></li>
+						<li><a href="animation.html">Animation</a></li>
 						<li><a href="#"></a></li>
 						<li><a href="#"></a></li>
 					</ul>
 				</div>
 			</div>
+
 			<div class="col-9">
-				<h2>Buttons</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate maiores maxime soluta tempore
-					velit, repellat incidunt minima hic molestiae dolore alias sapiente. Recusandae illo obcaecati
-					laudantium adipisci impedit. Reprehenderit, iste.</p>
-				<h3>Primary buttons</h3>
+				<h1>Glimworks - Light weight SASS framework</h1>
+				<h2>Components</h2>
+				<h3>Buttons</h3>
 				<a href="#" class="btn btn-primary">Primary</a>
 				<a href="#" class="btn btn-secondary">Secondary</a>
 				<a href="#" class="btn btn-success">Success</a>
@@ -66,15 +58,64 @@
 				<a href="#" class="btn btn-outline-dark">Dark</a>
 				<a href="#" class="btn btn-outline-muted">Muted</a>
 				<h3>Button sizes:</h3>
-				<a href="#" class="btn btn-primary btn-none">None</a>
-				<a href="#" class="btn btn-primary btn-small">Small</a>
-				<a href="#" class="btn btn-primary btn-medium">medium</a>
-				<a href="#" class="btn btn-primary btn-large">Large</a>
+				<a href="#" class="btn btn-primary btn-padding-none">None</a>
+				<a href="#" class="btn btn-primary btn-padding-small">Small</a>
+				<a href="#" class="btn btn-primary btn-padding-medium">medium</a>
+				<a href="#" class="btn btn-primary btn-padding-large">Large</a>
+				<h3>Buttons with icons:</h3>
+				<p><a href="https://ionic.io/ionicons">Ion-icon libs</a></p>
+				<!-- https://ionic.io/ionicons -->
+
+				<h4>Filled:</h4>
+
+				<h5>Icon to left or right</h5>
+
+				<a href="#" class="btn btn-primary"><span class="ion-icon"><span>home</span>
+						<ion-icon class="icon-padding-right" name="home"></ion-icon>
+					</span></a>
+
+				<a href="#" class="btn btn-primary"><span class="ion-icon"><span>home</span>
+						<ion-icon class="icon-padding-right" name="chatbox"></ion-icon>
+					</span></a>
+
+				<a href="#" class="btn btn-primary">
+					<span class="ion-icon">
+						<ion-icon class="icon-padding-left" name="home"></ion-icon>
+						<span>Chat</span>
+					</span></a>
+
+				<a href="#" class="btn btn-primary">
+					<span class="ion-icon">
+						<ion-icon class="icon-padding-left" name="chatbox"></ion-icon>
+						<span>Chat</span>
+					</span></a>
+
+				<h4>Outlined</h4>
+
+				<h5>Icon to left or right</h5>
+
+				<a href="#" class="btn btn-primary"><span class="ion-icon"><span>home</span>
+						<ion-icon class="icon-padding-right" name="home-outline"></ion-icon>
+					</span></a>
+
+				<a href="#" class="btn btn-primary"><span class="ion-icon"><span>home</span>
+						<ion-icon class="icon-padding-right" name="chatbox-outline"></ion-icon>
+					</span></a>
+
+				<a href="#" class="btn btn-primary">
+					<span class="ion-icon">
+						<ion-icon class="icon-padding-left" name="home-outline"></ion-icon>
+						<span>Chat</span>
+					</span></a>
+
+				<a href="#" class="btn btn-primary">
+					<span class="ion-icon">
+						<ion-icon class="icon-padding-left" name="chatbox-outline"></ion-icon>
+						<span>Chat</span>
+					</span></a>
 			</div>
 		</div>
 	</div>
-
-	<script src="/assets/js/bundle.js"></script>
 </body>
 
 </html>
