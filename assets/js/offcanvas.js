@@ -1,15 +1,13 @@
-/* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
+/* Toggles active class on offCanvas and canvasOfset to add margin and show offCanvas and modalBackgroud */
 function openOffcanvas() {
-    document.getElementById("offcanvas").style.width = "250px";
-    document.getElementById("main").style.marginLeft = "250px";
-    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    document.getElementById("offCanvas").classList.toggle("active");
+    document.getElementById("canvasOfset").classList.toggle("active");
 }
 
-/* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
+/* Toggles active class on offCanvas and canvasOfset to remove margin and hide offCanvas and modalBackgroud */
 function closeOffcanvas() {
-    document.getElementById("offcanvas").style.width = "0";
-    document.getElementById("main").style.marginLeft = "0";
-    document.body.style.backgroundColor = "white";
+    document.getElementById("offCanvas").classList.toggle("active");
+    document.getElementById("canvasOfset").classList.toggle("active");
 }
 
 export { openOffcanvas, closeOffcanvas };

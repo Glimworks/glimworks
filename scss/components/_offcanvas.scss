@@ -1,33 +1,79 @@
-.offcanvas {
-    height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
+$ofsetHorizontal: 250px; /* width of the offcanvas element */
+$ofsetVertical: 150px; /* height of the offcanvas element */
+
+.offCanvas {
     position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
-    top: 0;
-    left: 0;
+    z-index: 2; /* Stay on top */
     background-color: #111; /* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the offcanvas */
+    &.left {
+        top: 0;
+        left: 0;
+        height: 100%; /* 100% Full-height */
+        width: 0; /* 0 width - change this with JavaScript */
+        overflow-x: hidden; /* Disable horizontal scroll */
+        padding-top: 60px; /* Place content 60px from the top */
+        &.active {
+            width: $ofsetHorizontal; /* width of the offcanvas element */
+        }
+    }
+    &.right {
+        top: 0;
+        right: 0;
+        height: 100%; /* 100% Full-height */
+        width: 0; /* 0 width - change this with JavaScript */
+        overflow-x: hidden; /* Disable horizontal scroll */
+        padding-top: 60px; /* Place content 60px from the top */
+        &.active {
+            width: $ofsetHorizontal; /* width of the offcanvas element */
+        }
+    }
+    &.top {
+        top: 0;
+        left: 0;
+        height: 0; /* 0 height - change width active class */
+        width: 100%; /* 100% Full-width */
+        overflow-y: hidden; /* Disable horizontal scroll */
+        padding-left: 60px; /* Place content 60px from the left */
+        &.active {
+            height: $ofsetVertical; /* height of the offcanvas element */
+        }
+    }
+    &.bottom {
+        bottom: 0;
+        left: 0;
+        height: 0; /* 0 height - change width active class */
+        width: 100%; /* 100% Full-width */
+        overflow-y: hidden; /* Disable horizontal scroll */
+        padding-left: 60px; /* Place content 60px from the left */
+        &.active {
+            height: $ofsetVertical; /* height of the offcanvas element */
+        }
+    }
 }
 
 /* The navigation menu links */
-.offcanvas a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
+.offCanvas {
+    li {
+        list-style: none;
+    }
+    a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: hsl(0, 0%, 80%);
+        display: block;
+        transition: 0.3s;
+    }
 }
 
 /* When you mouse over the navigation links, change their color */
-.offcanvas a:hover {
+.offCanvas a:hover {
     color: #f1f1f1;
 }
 
 /* Position and style the close button (top right corner) */
-.offcanvas .closebtn {
+.offCanvas .closebtn {
     position: absolute;
     top: 0;
     right: 25px;
@@ -35,18 +81,81 @@
     margin-left: 50px;
 }
 
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-#main {
-    transition: margin-left 0.5s;
+/* Style page content - use this if you want to push the page content to the right/left/bottom/top when you open the side navigation */
+#canvasOfset {
+    transition: margin 0.5s;
     padding: 20px;
+    margin: 0;
+    &.canvasOfset {
+        &.right.active {
+            position: relative;
+            margin-left: $ofsetHorizontal; /* Width of the offcanvas ofset */
+            &:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                min-height: 100vh;
+                height: 100%;
+                z-index: 1;
+                background-color: hsla(0, 0%, 0%, 0.4);
+            }
+        }
+        &.left.active {
+            position: relative;
+            margin-right: $ofsetHorizontal; /* Width of the offcanvas ofset */
+            &:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 100vw;
+                min-height: 100vh;
+                height: 100%;
+                z-index: 1;
+                background-color: hsla(0, 0%, 0%, 0.4);
+            }
+        }
+        &.bottom.active {
+            position: relative;
+            margin-top: $ofsetVertical; /* Height of the offcanvas ofset */
+            &:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                min-height: 100vh;
+                height: 100%;
+                z-index: 1;
+                background-color: hsla(0, 0%, 0%, 0.4);
+            }
+        }
+        &.top.active {
+            position: relative;
+            margin-bottom: $ofsetVertical; /* Height of the offcanvas ofset */
+            &:before {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100vw;
+                min-height: 100vh;
+                height: 100%;
+                z-index: 1;
+                background-color: hsla(0, 0%, 0%, 0.4);
+            }
+        }
+    }
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the offcanvas (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
-    .offcanvas {
+    .offCanvas {
         padding-top: 15px;
     }
-    .offcanvas a {
+    .offCanvas a {
         font-size: 18px;
     }
 }
